@@ -1,33 +1,75 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 7, 44, 47, 1;
+    --background-start-rgb: 28, 24, 41, 1;
+    --background-end-rgb: 48, 48, 48, 1;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 7, 44, 47, 1;
+    --background-start-rgb: 28, 24, 41, 1;
+    --background-end-rgb: 48, 48, 48, 1;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  color: white;
   background: linear-gradient(
       to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      rgb(var(--foreground-rgb)),   rgb(var(--background-end-rgb)),rgb(var(--background-start-rgb))
+    );  
+}
+.signupBtn{
+  color: white;
+  background: linear-gradient(
+      to bottom,
+      #008080,  #7B5FBF
+    );  
+    margin: auto;
+    margin-top: 1rem;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+.nunito{
+  font-family:var(--font-nunito);
+}
+.inter{
+  font-family:var(--font-inter);
+}
+.poppins{
+  font-family:var(--font-poppins);
+}
+.outfit{
+  font-family:var(--font-outfit);
+}
+.hero-section .heading{
+  background: linear-gradient(to right,#B09DDD, #008080, #B09DDD);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.background{
+  background: linear-gradient(to bottom,#107B88, #6A63B6);
+  
+}
+footer{
+  
+  position: relative;
+  background-color: rgba(22, 24, 28, 0.5);
+ 
+  
+}
+@media screen and (max-width: 600px){
+  body{
+    background: #021D1D;
   }
 }

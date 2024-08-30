@@ -1,7 +1,25 @@
-import { Inter } from "next/font/google";
+import { Nunito, Inter, Poppins, Outfit} from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Image from "next/image";
+import Footer from "@/components/footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter_init = Inter({ subsets: ["latin"],variable: "--font-inter" });
+const nunito_init = Nunito({ 
+  subsets: ["latin"], 
+  weight:["200", "300", "400", "500", "600","700","800","900","1000"], 
+  variable: "--font-nunito" 
+});
+const poppins_init = Poppins({ 
+  subsets: ["latin"], 
+  weight:["200", "300", "400", "500", "600","700","800","900"], 
+  variable: "--font-poppins" 
+});
+const outfit_init = Outfit({ 
+  subsets: ["latin"], 
+  weight:["200", "300", "400", "500", "600","700","800","900"], 
+  variable: "--font-outfit" 
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +29,30 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter_init.variable} ${nunito_init.variable} ${poppins_init.variable} ${outfit_init.variable} relative`} >
+      <Image
+               src="/bg.png"
+               width="1000"
+               height="1000"
+               alt="icon"
+               className="w-full h-full  absolute left-0 top-0 -z-20 hidden sm:block"
+               />
+        <header className="m-auto"> 
+          <Header/>
+        </header>
+        {children}
+        <footer ><Image
+               src="/Looper BG.png"
+               width="100"
+               height="100"
+               alt="icon"
+               className="w-full h-[400px] hidden sm:block"
+               />
+               <Footer/>
+               </footer>
+        
+      </body>
+      
     </html>
   );
 }

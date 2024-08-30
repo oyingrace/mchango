@@ -1,0 +1,47 @@
+import Link from "next/link";
+import Image from "next/image";
+import Logo from "@/components/logo";
+
+export default function SignUp() {
+    return(<>
+    <section className=" hero-section text-white flex flex-col gap-4 items-center mb-6 p-6">
+        <div className="flex items-center gap-2"><Image
+               src="/mchango logo.png"
+               width="50"
+               height="50"
+               alt="icon"
+               /><Logo/></div>
+        <h2 className="text-[1.5rem] sm:text-[2.5rem] font-bold heading text-center">Gateway to Smart Savings and Contributions</h2>
+        
+      </section>
+     <h2 className="text-[white] text-center text-[1.5rem] sm:text-[2rem] nunito  font-bold ">Sign Up</h2>
+     <form className="p-8 w-full sm:w-[50%] m-auto px-12">
+        <div class="w-full text-[.75rem] flex flex-col  mb-4">
+                    <label for="firstname" className="">Full Name</label>
+                    <input type="text" id="firstname" placeholder="Name" required className="p-2 rounded-lg bg-white font-bold text-[1rem] text-black"/>
+        </div>
+        <div class="w-full text-[.75rem] flex flex-col  mb-4">
+                    <label for="email" className="">Email</label>
+                    <input type="email" id="email" placeholder="example@gmail.com" required className="p-2 rounded-lg bg-white font-bold text-[1rem] text-black"/>
+        </div>
+        <div class="w-full text-[.75rem] flex flex-col  mb-4">
+                    <label for="username" className="">Username</label>
+                    <input type="text" id="username" placeholder="example@gmail.com" required className="p-2 rounded-lg bg-white font-bold text-[1rem] text-black"/>
+        </div>
+        <div class="w-full text-[.75rem] flex flex-col  mb-4">
+                    <label for="country" className="">Country</label>
+                    <input type="text" id="country" placeholder="Nigeria" required className="p-2 rounded-lg bg-white font-bold text-[1rem] text-black"/>
+        </div>
+        <div class="w-full text-[.75rem] flex flex-col  mb-4">
+                    <label for="phoneNumber" className="">Phone Number</label>
+                    <input type="tel" id="phoneNumber" placeholder="+407" required className="p-2 rounded-lg bg-white font-bold text-[1rem] text-black"/>
+                    
+        </div>
+            
+            <button type="submit" className="p-2 bg-white text-[#5866AC] font-semibold rounded-lg block px-4 signupBtn">Subscribe</button>
+           </form>
+    </>
+       
+
+    );
+}
