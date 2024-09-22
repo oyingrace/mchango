@@ -15,7 +15,8 @@
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^6.26.2",
+    "web3": "^4.13.0"
   },
   "devDependencies": {
     "hardhat": "^2.22.11",
